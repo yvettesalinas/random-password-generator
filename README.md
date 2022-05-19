@@ -1,1 +1,2 @@
-# random-password-generator
+# Project Title
+Random Password Generator
