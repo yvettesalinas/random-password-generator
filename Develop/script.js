@@ -1,48 +1,147 @@
-// Reminder: # refers to the id from the HTML
-//Global variables
+// Reminder: # refers to the id from the HTML; Global variables
 var passwordEl=document.querySelector("#password");
 var generatebtnEl = document.querySelector("#generate");
 var copybtnEl=document.querySelector("#copy");
 
-// Add event listener to generate button
-generatebtnEl.addEventListener("click",  function() {
-  var characterLength=prompt("Number of characters (choose between 8 and 25 characters):")
-  
-  if ((characterLength >= 8) && (characterLength <= 25)) {
-     
-    //Variables for options: symbols, numbers and lower case and capital letters
-    let symbols = "~`! @#$%^&*()_-+={[}]|\:;'<,>.?/";
-    let numbers = "0123456789";
-    let capitalLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let lowerLetters= "abcdefghijklmnopqrstuvwxyz";
+generatebtnEl.addEventListener("click",  function () {
+
+  var passwordLength = prompt("Number of characters (choose between 8 and 25 characters):")
+
+    if ((passwordLength >= 8) && (passwordLength <= 25)) {
+         
+      //Variables for options: symbols, numbers and lower case and capital letters
+      let symbols = "~`! @#$%^&*()_-+={[}]|\:;'<,>.?/";
+      let numbers = "0123456789";
+      let capitalLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      let lowerLetters= "abcdefghijklmnopqrstuvwxyz";
+        
+      //Prompts to confirm options
+      let newPassword = "";
+      let askSymbols = confirm("Do you want your new password to have special characters?  For example: !{/?");
+      let askNumbers = confirm("Do you want your new password to have numbers characters?");
+      let askCapital = confirm("Do you want your password to have capital letters?");
+      let askLower = confirm("Do you want your new password to have lowercase letters?");
+
+      //Possible user option combinations
+      var allOption = symbols + numbers + capitalLetters + lowerLetters;
+      var sn = symbols + numbers;
+      var sc = symbols + capitalLetters;
+      var sl = symbols + lowerLetters;
+      var nl = numbers + lowerLetters;
+      var nc = numbers + capitalLetters;
+      var lc = lowerLetters + capitalLetters;
+      var snc = symbols + numbers + capitalLetters;
+      var snl = symbols + numbers + lowerLetters;
+      var nlc = numbers + lowerLetters + capitalLetters;
+      var slc = symbols + lowerLetters +capitalLetters;
+      var s = symbols;
+      var l = lowerLetters;
+      var n = numbers;
+      var c = capitalLetters;
     
-  }
-})
 
-let newPassword = "";
-let askSymbols = confirm("Do you want your new password to have special characters?  For example: !{/?");
-let askNumbers = confirm("Do you want your new password to have numbers characters?");
-let askCapital = confirm("Do you want your password to have capital letters?");
-let askLower = confirm("Do you want your new password to have lowercase letters?");
+    if ((askSymbols === true) && (askNumbers === true) && (askCapital ===true) && (askLower === true)) {
+      for (i = 0; i < passwordLength; i++) {
+      let password = Math.floor (Math.random() * allOption.length);
+      newPassword += allOption.charAt (character, character + 1);
+      }
+    }
 
+    else if ((askSymbols === true) && (askNumbers === true) && (askCapital === false) && (askLower === false)) {
+      for (i = 0; i < passwordLength; i++) {
+        let password = Math.floor (Math.random() * sn.length);
+        newPassword += sn.charAt (character, character + 1);
+      }
+    }
+  
+    else if ((askSymbols === true) && (askNumbers === false) && (askCapital === true) && (askLower === false)) {
+      for (i = 0; i < passwordLength; i++) {
+        let password = Math.floor (Math.random() * sc.length);
+        newPassword += sc.charAt (character, character + 1);
+      }
+    }
+     
+    else if ((askSymbols === true) && (askNumbers === false) && (askCapital === false) && (askLower === true))
+      for (i = 0; i < passwordLength; i++) {
+        let password = Math.floor (Math.random() * sl.length);
+        newPassword += sl.charAt (character, character + 1);
+      }
+  
+    else if ((askSymbols === false) && (askNumbers === true) && (askCapital === false) && (askLower === true))
+      for (i = 0; i < passwordLength; i++) {
+        let password = Math.floor (Math.random() * nl.length);
+        newPassword += nl.charAt (character, character + 1);
+      }
+    
+    else if ((askSymbols === false) && (askNumbers === true) && (askCapital === true) && (askLower === false))
+      for (i = 0; i < passwordLength; i++) {
+        let password = Math.floor (Math.random() * nc.length);
+        newPassword += nc.charAt (character, character + 1);
+      }
+    
+    else if ((askSymbols === false) && (askNumbers === false) && (askCapital === true) && (askLower === true))
+      for (i = 0; i < passwordLength; i++) {
+        let password = Math.floor (Math.random() * lc.length);
+        newPassword += lc.charAt (character, character + 1);
+      }
 
-var allOption = symbols + numbers + capitalLetters + lowerLetters;
-var snOption = symbols + numbers;
-var scOption = symbols + capitalLetters;
-var slOption = symbols + lowerLetters;
-var nlOption = numbers + lowerLetters;
-var ncOption = numbers + capitalLetters;
-var lcOption = lowerLetters + capitalLetters;
-var sncOption = symbols + numbers + capitalLetters;
-var snlOption = symbols + numbers + lowerLetters;
-var nlcOption = numbers + lowerLetters + capitalLetters;
-var slcOption = symbols + lowerLetters +capitalLetters;
+    else if ((askSymbols === true) && (askNumbers === true) && (askCapital === true) && (askLower === false))
+    for (i = 0; i < passwordLength; i++) {
+      let password = Math.floor (Math.random() * snc.length);
+      newPassword += snc.charAt (character, character + 1);
+    }
+
+    else if ((askSymbols === true) && (askNumbers === true) && (askCapital === false) && (askLower === true))
+      for (i = 0; i < passwordLength; i++) {
+        let password = Math.floor (Math.random() * snl.length);
+        newPassword += snl.charAt (character, character + 1);
+      }
+    
+    else if ((askSymbols === false) && (askNumbers === true) && (askCapital === true) && (askLower === true))
+      for (i = 0; i < passwordLength; i++) {
+        let password = Math.floor (Math.random() * nlc.length);
+        newPassword += nlc.charAt (character, character + 1);
+      }
+
+    else if ((askSymbols === true) && (askNumbers === false) && (askCapital === true) && (askLower === true))
+      for (i = 0; i < passwordLength; i++) {
+        let password = Math.floor (Math.random() * slc.length);
+        newPassword += slc.charAt (character, character + 1);
+      }
+    
+    else if ((askSymbols === true) && (askNumbers === false) && (askCapital === false) && (askLower === false))
+      for (i = 0; i < passwordLength; i++) {
+        let password = Math.floor (Math.random() * s.length);
+        newPassword += s.charAt (character, character + 1);
+      }
+    
+    else if ((askSymbols === false) && (askNumbers === false) && (askCapital === false) && (askLower === true))
+      for (i = 0; i < passwordLength; i++) {
+        let password = Math.floor (Math.random() * l.length);
+        newPassword += l.charAt (character, character + 1);
+      }
+
+    else if ((askSymbols === false) && (askNumbers === true) && (askCapital === false) && (askLower === false))
+      for (i = 0; i < passwordLength; i++) {
+        let password = Math.floor (Math.random() * n.length);
+        newPassword += n.charAt (character, character + 1);
+      }
+    
+    else if ((askSymbols === false) && (askNumbers === false) && (askCapital === true) && (askLower === false))
+      for (i = 0; i < passwordLength; i++) {
+        let password = Math.floor (Math.random() * c.length);
+        newPassword += c.charAt (character, character + 1);
+      }
+
+    }   
+  
+  passwordEl.textContent = newPassword;
+}
+)
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-  passwordText.value = password;
-
-}
-
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
+//   passwordText.value = password;
+// })
