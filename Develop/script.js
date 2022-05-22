@@ -43,110 +43,111 @@ generatebtnEl.addEventListener("click",  function () {
     if ((askSymbols === true) && (askNumbers === true) && (askCapital ===true) && (askLower === true)) {
       for (i = 0; i < passwordLength; i++) {
       let password = Math.floor (Math.random() * allOption.length);
-      newPassword += allOption.charAt (character, character + 1);
+      newPassword += allOption.charAt(password, password + 1);
       }
     }
 
     else if ((askSymbols === true) && (askNumbers === true) && (askCapital === false) && (askLower === false)) {
       for (i = 0; i < passwordLength; i++) {
         let password = Math.floor (Math.random() * sn.length);
-        newPassword += sn.charAt (character, character + 1);
+        newPassword += sn.charAt(password, password + 1);
       }
     }
   
     else if ((askSymbols === true) && (askNumbers === false) && (askCapital === true) && (askLower === false)) {
       for (i = 0; i < passwordLength; i++) {
         let password = Math.floor (Math.random() * sc.length);
-        newPassword += sc.charAt (character, character + 1);
+        newPassword += sc.charAt(password, password + 1);
       }
     }
      
     else if ((askSymbols === true) && (askNumbers === false) && (askCapital === false) && (askLower === true)) {
       for (i = 0; i < passwordLength; i++) {
         let password = Math.floor (Math.random() * sl.length);
-        newPassword += sl.charAt (character, character + 1);
+        newPassword += sl.charAt(password, password + 1);
       }
     }
   
     else if ((askSymbols === false) && (askNumbers === true) && (askCapital === false) && (askLower === true)) {
       for (i = 0; i < passwordLength; i++) {
         let password = Math.floor (Math.random() * nl.length);
-        newPassword += nl.charAt (character, character + 1);
+        newPassword += nl.charAt(password, password + 1);
       }
     }
     
     else if ((askSymbols === false) && (askNumbers === true) && (askCapital === true) && (askLower === false)) {
       for (i = 0; i < passwordLength; i++) {
         let password = Math.floor (Math.random() * nc.length);
-        newPassword += nc.charAt (character, character + 1);
+        newPassword += nc.charAt(password, password + 1);
       }
     }
     
     else if ((askSymbols === false) && (askNumbers === false) && (askCapital === true) && (askLower === true)) {
       for (i = 0; i < passwordLength; i++) {
         let password = Math.floor (Math.random() * lc.length);
-        newPassword += lc.charAt (character, character + 1);
+        newPassword += lc.charAt(password, password + 1);
       }
     }
 
     else if ((askSymbols === true) && (askNumbers === true) && (askCapital === true) && (askLower === false)) {
     for (i = 0; i < passwordLength; i++) {
       let password = Math.floor (Math.random() * snc.length);
-      newPassword += snc.charAt (character, character + 1);
+      newPassword += snc.charAt(password, password + 1);
     }
   }
 
     else if ((askSymbols === true) && (askNumbers === true) && (askCapital === false) && (askLower === true)) {
       for (i = 0; i < passwordLength; i++) {
         let password = Math.floor (Math.random() * snl.length);
-        newPassword += snl.charAt (character, character + 1);
+        newPassword += snl.charAt(password, password + 1);
       }
     }
     
     else if ((askSymbols === false) && (askNumbers === true) && (askCapital === true) && (askLower === true)) {
       for (i = 0; i < passwordLength; i++) {
         let password = Math.floor (Math.random() * nlc.length);
-        newPassword += nlc.charAt (character, character + 1);
+        newPassword += nlc.charAt(password, password + 1);
       }
     }
     
     else if ((askSymbols === true) && (askNumbers === false) && (askCapital === true) && (askLower === true)) {
       for (i = 0; i < passwordLength; i++) {
         let password = Math.floor (Math.random() * slc.length);
-        newPassword += slc.charAt (character, character + 1);
+        newPassword += slc.charAt(password, password + 1);
       }
     }
     
     else if ((askSymbols === true) && (askNumbers === false) && (askCapital === false) && (askLower === false)) {
       for (i = 0; i < passwordLength; i++) {
         let password = Math.floor (Math.random() * s.length);
-        newPassword += s.charAt (character, character + 1);
+        newPassword += s.charAt(password, password + 1);
       }
     }
     
     else if ((askSymbols === false) && (askNumbers === false) && (askCapital === false) && (askLower === true)) {
       for (i = 0; i < passwordLength; i++) {
         let password = Math.floor (Math.random() * l.length);
-        newPassword += l.charAt (character, character + 1);
+        newPassword += l.charAt(password, password + 1);
       }
     }
 
     else if ((askSymbols === false) && (askNumbers === true) && (askCapital === false) && (askLower === false)) {
       for (i = 0; i < passwordLength; i++) {
         let password = Math.floor (Math.random() * n.length);
-        newPassword += n.charAt (character, character + 1);
+        newPassword += n.charAt(password, password+ 1);
       }
     }
     
     else if ((askSymbols === false) && (askNumbers === false) && (askCapital === true) && (askLower === false)) {
       for (i = 0; i < passwordLength; i++) {
         let password = Math.floor (Math.random() * c.length);
-        newPassword += c.charAt (character, character + 1);
+        newPassword += c.charAt(password, password + 1);
       }
     }   
   
   passwordEl.textContent = newPassword;
 }
+})
 
 
 //Write password to the #password input
