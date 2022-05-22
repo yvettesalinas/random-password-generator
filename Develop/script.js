@@ -13,7 +13,7 @@ generatebtnEl.addEventListener("click",  function () {
       let symbols = "~`! @#$%^&*()_-+={[}]|\:;'<,>.?/";
       let numbers = "0123456789";
       let capitalLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      let lowerLetters= "abcdefghijklmnopqrstuvwxyz";
+      let lowerLetters = "abcdefghijklmnopqrstuvwxyz";
         
       //Prompts to confirm options
       let newPassword = "";
@@ -39,7 +39,7 @@ generatebtnEl.addEventListener("click",  function () {
       var n = numbers;
       var c = capitalLetters;
     
-
+      //"if" and "else if" statements to run with every possible user combination
     if ((askSymbols === true) && (askNumbers === true) && (askCapital ===true) && (askLower === true)) {
       for (i = 0; i < passwordLength; i++) {
       let password = Math.floor (Math.random() * allOption.length);
