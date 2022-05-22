@@ -157,3 +157,5 @@ function writePassword() {
   passwordText.value = password;
 }
 
+//Script end
+
