@@ -27,6 +27,6 @@ The following images demonstrate the application's appearance:
 ## 🌐 Project Usage
 To view the application, please click on the following link: 
 
-[Random Password Generator]()
+[Random Password Generator](https://yvettesalinas.github.io/random-password-generator/)
 
 
