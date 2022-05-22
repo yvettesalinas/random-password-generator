@@ -5,9 +5,9 @@ var copybtnEl=document.querySelector("#copy");
 
 generatebtnEl.addEventListener("click",  function () {
 
-  var passwordLength = prompt("Number of characters (choose between 8 and 25 characters):")
+  var passwordLength = prompt("Number of characters (choose between 8 and 128 characters):")
 
-    if ((passwordLength >= 8) && (passwordLength <= 25)) {
+    if ((passwordLength >= 8) && (passwordLength <= 128)) {
          
       //Variables for options: symbols, numbers and lower case and capital letters
       let symbols = "~`! @#$%^&*()_-+={[}]|\:;'<,>.?/";
